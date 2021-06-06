@@ -21,6 +21,8 @@ public class App {
 
         String h = String.format("%.2f", a);
 
+        String output = "";
+
         //simple if statement
         if("WI".equals(state)) {
             double b = a * tax;
@@ -29,14 +31,16 @@ public class App {
             String g = String.format("%.2f", b);
             String s = String.format("%.2f", c);
 
-            System.out.print("The Subtotal is $" + h + ".\n" + "The tax is $" + g + ".\n" +
-                    "The total is $" + s + ".");
+            output += "The Subtotal is $" + h + ".\n" + "The tax is $" + g + ".\n" +
+                    "The total is $" + s + ".";
         }
 
         if(!"WI".equals(state)) {
 
-            System.out.print("The total is $" + h);
+            output += "The total is $" + h;
         }
+
+        System.out.print(output);
 
     }
 }
